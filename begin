@@ -13,10 +13,14 @@ print ' barbaric thieves."'
 def question1():
     print '"Well, I\'m very sorry... how do you feel?'
 
-remember = raw_input('Do you remember this? Y/N:')
-if remember == 'y':
-    question1()
-elif remember == 'n':
-    print '"Ah, well... the riders torched your barn and killed your livestock... then they plundered your house."'
-    question1()
-
+def remember():
+    remember = raw_input('Do you remember this? Y/N:')
+    if remember == 'y':
+        question1()
+    elif remember == 'n':
+        print '"Ah, well... the riders torched your barn and killed your livestock... then they plundered your house."'
+        question1()
+    else:
+        print '"What was that you said?"'
+        remember()
+remember()
